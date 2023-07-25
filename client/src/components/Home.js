@@ -10,7 +10,7 @@ const Home = () => {
 
     const [data, setData] = useState([]);
     const [show, setShow] = useState(false);
-    
+    console.log(data)
     const getUserData = async () => {
         const res = await axios.get("http://localhost:8000/getdata", {
            
@@ -42,7 +42,7 @@ const Home = () => {
 
     useEffect(() => {
         getUserData()
-    }, [dltUser])
+    }, [])
     return (
         <>
       
