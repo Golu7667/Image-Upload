@@ -12,7 +12,7 @@ const Home = () => {
     const [show, setShow] = useState(false);
   
     const getUserData = async () => {
-        const res = await axios.get("http://localhost:8000/getdata", {
+        const res = await axios.get("https://image-5mn4.onrender.com/getdata", {
            
         });
 
@@ -26,7 +26,7 @@ const Home = () => {
     }
 
     const dltUser = async (id) => {
-        const res = await axios.delete(`http://localhost:8000/${id}`, {
+        const res = await axios.delete(`https://image-5mn4.onrender.com/${id}`, {
             headers: {
                 "Content-Type": "application/json"
             }
@@ -66,7 +66,7 @@ const Home = () => {
                                 <>
                                    
                                     <Card style={{ width: '22rem', height: "18rem" }} className="mb-3">
-                                        <Card.Img variant="top" style={{ width: "100px", textAlign: "center", margin: "auto" }} src={`http://localhost:8000/uploads/${el.imgpath}`} className='mt-2' />
+                                        <Card.Img variant="top" style={{ width: "100px", textAlign: "center", margin: "auto" }} src={`https://image-5mn4.onrender.com/uploads/${el.imgpath}`} className='mt-2' />
                                         <Card.Body className='text-center'>
                                             <Card.Title>User Name : {el.fname}</Card.Title>
                                             <Card.Text>

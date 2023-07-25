@@ -36,7 +36,7 @@ const Register = () => {
       }
     }
 
-    const res = await axios.post("http://localhost:8000/register", formData, config);
+    const res = await axios.post("https://image-5mn4.onrender.com/register", formData, config);
 
     if (res.data.status === 401 || !res.data) {
       console.log("errror")
