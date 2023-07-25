@@ -11,7 +11,7 @@ require("./db/conn");
 app.use(express.json());
 app.use(cors())
 app.use(router); 
-mongoose.set('strictQuery', false);
+
 app.use("/uploads",express.static("./uploads"));
 
 app.get("/",(req,res)=>{
