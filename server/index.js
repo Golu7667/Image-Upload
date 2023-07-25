@@ -14,6 +14,9 @@ app.use(router);
 mongoose.set('strictQuery', false);
 app.use("/uploads",express.static("./uploads"));
 
+app.get("/",(req,res)=>{
+    res.send("server is running")
+})
 
 app.listen(process.env.PORT,()=>{
     console.log(`server start at port no ${process.env.PORT}`)
