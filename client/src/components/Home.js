@@ -10,17 +10,16 @@ const Home = () => {
 
     const [data, setData] = useState([]);
     const [show, setShow] = useState(false);
-    console.log(data)
+    
     const getUserData = async () => {
         const res = await axios.get("http://localhost:8000/getdata", {
-            headers: {
-                "Content-Type": "application/json"
-            }
+           
         });
 
         if (res.data.status === 401 || !res.data) {
             console.log("errror")
         } else {
+           
             setData(res.data.getUser)
         }
 
@@ -43,9 +42,10 @@ const Home = () => {
 
     useEffect(() => {
         getUserData()
-    }, [dltUser, getUserData])
+    }, [dltUser])
     return (
         <>
+      
             {
                 show ? <Alert variant="danger" onClose={() => setShow(false)} dismissible>
                      Delete
@@ -61,10 +61,12 @@ const Home = () => {
 
                     {
                         data.length > 0 ? data.map((el, i) => {
+                           
                             return (
                                 <>
+                                   
                                     <Card style={{ width: '22rem', height: "18rem" }} className="mb-3">
-                                        <Card.Img variant="top" style={{ width: "100px", textAlign: "center", margin: "auto" }} src={`/uploads/${el.imgpath}`} className='mt-2' />
+                                        <Card.Img variant="top" style={{ width: "100px", textAlign: "center", margin: "auto" }} src={`http://localhost:8000/uploads/${el.imgpath}`} className='mt-2' />
                                         <Card.Body className='text-center'>
                                             <Card.Title>User Name : {el.fname}</Card.Title>
                                             <Card.Text>
