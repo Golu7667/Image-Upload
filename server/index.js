@@ -15,5 +15,5 @@ app.use("/uploads",express.static("./uploads"));
 
 
 app.listen(process.env.PORT,()=>{
-    console.log(`server start at port no ${port}`)
-})
+    console.log(`server start at port no ${process.env.PORT}`)
+}) 
