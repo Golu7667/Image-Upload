@@ -48,7 +48,7 @@ const Register = () => {
   return (
     <>
       <div className="container mt-3">
-        <h1>Upload Your Img Here</h1>
+        <h1>Image Upload</h1>
 
         <Form className='mt-3'>
           <Form.Group className="mb-3" controlId="formBasicEmail">

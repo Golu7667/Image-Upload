@@ -9,10 +9,8 @@ import Alert from 'react-bootstrap/Alert';
 const Home = () => {
 
     const [data, setData] = useState([]);
-    // console.log(data)
-
     const [show, setShow] = useState(false);
-
+    console.log(data)
     const getUserData = async () => {
         const res = await axios.get("http://localhost:8000/getdata", {
             headers: {
@@ -45,7 +43,7 @@ const Home = () => {
 
     useEffect(() => {
         getUserData()
-    }, [dltUser])
+    }, [dltUser, getUserData])
     return (
         <>
             {
@@ -54,7 +52,7 @@ const Home = () => {
                 </Alert> : ""
             }
             <div className='container mt-2'>
-                <h1 className='text-center mt-2'>MERN Image</h1>
+                <h1 className='text-center mt-2'>All Image </h1>
                 <div className='text-end'>
                     <Button variant="primary"><NavLink to="/register" className="text-decoration-none text-light">Add User</NavLink></Button>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from 'react-bootstrap/Container';
+
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from "react-router-dom"
@@ -7,13 +7,14 @@ import { NavLink } from "react-router-dom"
 const Header = () => {
     return (
         <>
-            <Navbar bg="dark" variant="dark" style={{height:"60px"}}>
-                <Container>
-                    <NavLink to="/" className="text-decoration-none text-light mx-2">Navbar</NavLink>
-                    <Nav className="me-auto">
-                        <NavLink to="/register" className="text-decoration-none text-light mx-2">Register</NavLink>
-                    </Nav>
-                </Container>
+            <Navbar   variant="primary" className="d-flex justify-content-center align-items-center fs-4 bg-secondary " >
+              
+              
+                    <NavLink to="/" className="text-decoration-none text-black mx-2 border border-primary-subtle rounded bg-white">Home</NavLink>
+                  
+                     <NavLink to="/register" className="text-decoration-none text-black mx-2 border border-primary-subtle rounded bg-white">Register</NavLink>
+                    
+               
             </Navbar>
         </>
     )
